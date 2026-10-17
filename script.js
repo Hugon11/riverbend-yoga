@@ -27,6 +27,10 @@ const classDetails = {
     active: "Best for students looking for a more active workout."
 };
 
+const storageKeys = {
+    yogaPreference: "riverbendYogaPreference",
+    visitorName: "riverbendVisitorName"
+};
 
 // Find a yoga class based on the user's selection
 function findYogaClass(goal) {
@@ -53,13 +57,13 @@ function displayRecommendation(goal) {
 
 // Save the user's preference
 function savePreference(goal) {
-    localStorage.setItem("riverbendYogaPreference", goal);
+    localStorage.setItem(storageKeys.yogaPreference, goal);
 }
 
 
 // Load the saved preference
 function loadPreference() {
-    const savedGoal = localStorage.getItem("riverbendYogaPreference");
+    const savedGoal = localStorage.getItem(storageKeys.yogaPreference);
     const selector = document.getElementById("yoga-goal");
 
     if (savedGoal && selector) {
@@ -139,7 +143,7 @@ function validateRequestForm(event) {
 
     if (isValid) {
         localStorage.setItem(
-            "riverbendVisitorName",
+            storageKeys.visitorName,
             nameInput.value.trim()
         );
 
@@ -152,7 +156,7 @@ function validateRequestForm(event) {
 // Restore the visitor's saved name
 function loadVisitorName() {
     const nameInput = document.getElementById("name");
-    const savedName = localStorage.getItem("riverbendVisitorName");
+    const savedName = localStorage.getItem(storageKeys.visitorName);
 
     if (nameInput && savedName) {
         nameInput.value = savedName;
