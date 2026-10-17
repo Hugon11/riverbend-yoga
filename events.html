@@ -64,7 +64,7 @@
             form below and a member of our team will contact you.
         </p>
 
-        <form action="#" method="post">
+        <form id="request-form" action="#" method="post" novalidate>
 
             <fieldset>
                 <legend>Contact Information</legend>
@@ -73,16 +73,22 @@
                     <label for="name">Name:</label>
                     <input type="text"
                            id="name"
-                           name="name"
-                           required>
+                           name="name">
+
+                    <span id="name-error"
+                          class="error-message"
+                          aria-live="polite"></span>
                 </p>
 
                 <p>
                     <label for="email">Email:</label>
                     <input type="email"
                            id="email"
-                           name="email"
-                           required>
+                           name="email">
+
+                    <span id="email-error"
+                          class="error-message"
+                          aria-live="polite"></span>
                 </p>
             </fieldset>
 
@@ -158,6 +164,10 @@
 
             <button type="submit">Request a Spot</button>
 
+            <p id="form-success"
+               class="success-message"
+               aria-live="polite"></p>
+
         </form>
     </section>
 
@@ -167,5 +177,6 @@
     <p>&copy; 2026 Riverbend Yoga Studio</p>
 </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

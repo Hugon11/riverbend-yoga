@@ -23,6 +23,29 @@
 </header>
 
 <main>
+    <section id="class-finder">
+        <h2>Find Your Yoga Class</h2>
+
+        <p>
+            Not sure which class is right for you?
+            Choose what you want from your yoga practice and we'll recommend one.
+        </p>
+
+        <label for="yoga-goal">What are you looking for?</label>
+
+        <select id="yoga-goal">
+            <option value="">Choose an option</option>
+            <option value="relax">Relaxation and stress relief</option>
+            <option value="gentle">Gentle movement for beginners</option>
+            <option value="active">A more active workout</option>
+        </select>
+
+        <button type="button" id="find-class-btn">
+            Find My Class
+        </button>
+
+        <div id="class-result" aria-live="polite"></div>
+    </section>
 
     <section>
         <h2>Yoga Classes</h2>
@@ -79,6 +102,6 @@
 <footer>
     <p>&copy; 2026 Riverbend Yoga Studio</p>
 </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
